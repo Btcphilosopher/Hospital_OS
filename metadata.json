@@ -1,0 +1,6 @@
+{
+  "name": "HospitalOS",
+  "description": "Enterprise-grade Hospital Information System (HIS) and Electronic Health Record (EHR) platform for clinical care, patient administration, finance, and hospital operations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

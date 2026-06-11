@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", Georgia, Cambria, serif;
+}
+
+/* Custom Scrollbar Styles for medical queues */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Smooth ambient enter animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Intercept global styles for the Sophisticated Dark design theme */
+html, body {
+  background-color: #050505 !important;
+  color: #e5e7eb !important;
+}
+
+/* Background overrides */
+.bg-slate-50, .bg-slate-100, .bg-gray-50, .bg-gray-100, .bg-slate-200 {
+  background-color: #0a0a0a !important;
+}
+.bg-white, .bg-gray-50\/50, .bg-slate-50\/50, .bg-card, .bg-slate-200\/20 {
+  background-color: #111111 !important;
+}
+.bg-\[\#050505\], .bg-slate-50\/30 {
+  background-color: #050505 !important;
+}
+
+/* Border overrides */
+.border, .border-slate-100, .border-slate-200, .border-slate-300, .border-gray-100, .border-gray-200 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.divide-slate-50 > :not([hidden]) ~ :not([hidden]),
+.divide-slate-100 > :not([hidden]) ~ :not([hidden]),
+.divide-gray-100 > :not([hidden]) ~ :not([hidden]),
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Text color overrides */
+.text-slate-900, .text-gray-900, .text-slate-800, .text-gray-800, .text-slate-950 {
+  color: #ffffff !important;
+}
+.text-slate-700, .text-gray-700, .text-slate-600, .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+.text-slate-500, .text-gray-500, .text-slate-400, .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* Inputs, Selects, Textareas override */
+input, select, textarea, select option {
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #14b8a6 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 1px #14b8a6 !important;
+}
+
+/* Pastel Badge styles mapped to premium neon dark */
+.bg-emerald-50, .bg-emerald-100, .bg-green-50, .bg-green-100 {
+  background-color: rgba(20, 184, 166, 0.1) !important;
+  color: #2dd4bf !important;
+  border: 1px solid rgba(20, 184, 166, 0.2) !important;
+}
+.bg-rose-50, .bg-rose-100, .bg-red-50, .bg-red-100 {
+  background-color: rgba(244, 63, 94, 0.1) !important;
+  color: #fb7185 !important;
+  border: 1px solid rgba(244, 63, 94, 0.2) !important;
+}
+.bg-amber-50, .bg-amber-100, .bg-yellow-50, .bg-yellow-100 {
+  background-color: rgba(245, 158, 11, 0.1) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.2) !important;
+}
+.bg-cyan-50, .bg-cyan-100, .bg-blue-50, .bg-blue-100, .bg-indigo-50 {
+  background-color: rgba(14, 165, 233, 0.1) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(14, 165, 233, 0.2) !important;
+}
+
+/* Accent buttons / badges */
+.bg-cyan-600, .bg-cyan-700, .bg-teal-600, .bg-teal-700 {
+  background-color: #14b8a6 !important;
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+.bg-cyan-600:hover, .bg-cyan-700:hover, .bg-teal-600:hover, .bg-teal-700:hover {
+  background-color: #0d9488 !important;
+}
+.text-cyan-600, .text-cyan-700, .text-cyan-800, .text-teal-600, .text-teal-700 {
+  color: #14b8a6 !important;
+}
+
+/* Table headers and backgrounds */
+thead tr {
+  background-color: #0a0a0a !important;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
